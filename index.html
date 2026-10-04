@@ -1,0 +1,488 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Registration Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">EventHub</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#events">Events</a>
+            <a href="#register">Register</a>
+            <a href="#registrations">Registrations</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="tagline">EVENT REGISTRATION PORTAL</p>
+
+            <h1>Discover. Register.<br>Participate.</h1>
+
+            <p>
+                Explore upcoming events, register easily,
+                and manage your event participation in one place.
+            </p>
+
+            <a href="#events" class="hero-btn">
+                Explore Events
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Events Section -->
+    <section id="events" class="section">
+
+        <div class="section-heading">
+            <p>UPCOMING EVENTS</p>
+            <h2>Explore Our Events</h2>
+        </div>
+
+        <div class="events-grid">
+
+            <!-- Event 1 -->
+            <div class="event-card">
+
+                <div class="event-image tech">
+                    <span>TECH</span>
+                </div>
+
+                <div class="event-content">
+
+                    <span class="event-type">TECHNOLOGY</span>
+
+                    <h3>Tech Innovation Summit</h3>
+
+                    <p>
+                        Explore emerging technologies,
+                        innovation and future trends.
+                    </p>
+
+                    <div class="event-details">
+                        <span>15 Oct 2026</span>
+                        <span>10:00 AM</span>
+                    </div>
+
+                    <button
+                        class="register-btn"
+                        onclick="selectEvent('Tech Innovation Summit')">
+                        Register Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Event 2 -->
+            <div class="event-card">
+
+                <div class="event-image hackathon">
+                    <span>HACKATHON</span>
+                </div>
+
+                <div class="event-content">
+
+                    <span class="event-type">COMPETITION</span>
+
+                    <h3>CodeSprint Hackathon</h3>
+
+                    <p>
+                        Build innovative solutions and
+                        compete with talented developers.
+                    </p>
+
+                    <div class="event-details">
+                        <span>20 Oct 2026</span>
+                        <span>9:00 AM</span>
+                    </div>
+
+                    <button
+                        class="register-btn"
+                        onclick="selectEvent('CodeSprint Hackathon')">
+                        Register Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Event 3 -->
+            <div class="event-card">
+
+                <div class="event-image workshop">
+                    <span>WORKSHOP</span>
+                </div>
+
+                <div class="event-content">
+
+                    <span class="event-type">WORKSHOP</span>
+
+                    <h3>Web Development Workshop</h3>
+
+                    <p>
+                        Learn modern web development
+                        through hands-on activities.
+                    </p>
+
+                    <div class="event-details">
+                        <span>25 Oct 2026</span>
+                        <span>11:00 AM</span>
+                    </div>
+
+                    <button
+                        class="register-btn"
+                        onclick="selectEvent('Web Development Workshop')">
+                        Register Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Event 4 -->
+            <div class="event-card">
+
+                <div class="event-image ai">
+                    <span>AI</span>
+                </div>
+
+                <div class="event-content">
+
+                    <span class="event-type">ARTIFICIAL INTELLIGENCE</span>
+
+                    <h3>AI & Future Technologies</h3>
+
+                    <p>
+                        Discover the possibilities of AI
+                        and intelligent technologies.
+                    </p>
+
+                    <div class="event-details">
+                        <span>30 Oct 2026</span>
+                        <span>2:00 PM</span>
+                    </div>
+
+                    <button
+                        class="register-btn"
+                        onclick="selectEvent('AI & Future Technologies')">
+                        Register Now
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Registration Section -->
+    <section id="register" class="registration-section">
+
+        <div class="section-heading">
+            <p>JOIN AN EVENT</p>
+            <h2>Event Registration</h2>
+        </div>
+
+
+        <div class="form-container">
+
+            <form id="registrationForm">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter your phone number"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="department">
+                            Department
+                        </label>
+
+                        <select id="department" required>
+
+                            <option value="">
+                                Select Department
+                            </option>
+
+                            <option value="Computer Science">
+                                Computer Science
+                            </option>
+
+                            <option value="Information Technology">
+                                Information Technology
+                            </option>
+
+                            <option value="Electronics">
+                                Electronics
+                            </option>
+
+                            <option value="Mechanical">
+                                Mechanical
+                            </option>
+
+                            <option value="Civil">
+                                Civil
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="year">
+                            Year
+                        </label>
+
+                        <select id="year" required>
+
+                            <option value="">
+                                Select Year
+                            </option>
+
+                            <option value="I Year">
+                                I Year
+                            </option>
+
+                            <option value="II Year">
+                                II Year
+                            </option>
+
+                            <option value="III Year">
+                                III Year
+                            </option>
+
+                            <option value="IV Year">
+                                IV Year
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="event">
+                            Select Event
+                        </label>
+
+                        <select id="event" required>
+
+                            <option value="">
+                                Select an Event
+                            </option>
+
+                            <option value="Tech Innovation Summit">
+                                Tech Innovation Summit
+                            </option>
+
+                            <option value="CodeSprint Hackathon">
+                                CodeSprint Hackathon
+                            </option>
+
+                            <option value="Web Development Workshop">
+                                Web Development Workshop
+                            </option>
+
+                            <option value="AI & Future Technologies">
+                                AI & Future Technologies
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="submit-btn">
+                    Complete Registration
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Registrations Section -->
+    <section id="registrations" class="section registrations-section">
+
+        <div class="section-heading">
+
+            <p>MANAGEMENT</p>
+
+            <h2>Registered Participants</h2>
+
+        </div>
+
+
+        <div class="registration-tools">
+
+            <input
+                type="text"
+                id="searchRegistration"
+                placeholder="Search by name or event...">
+
+            <button onclick="clearRegistrations()" class="clear-btn">
+                Clear All
+            </button>
+
+        </div>
+
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Year</th>
+                        <th>Event</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="registrationTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div id="emptyMessage" class="empty-message">
+
+            No registrations yet.
+
+        </div>
+
+    </section>
+
+
+    <!-- Success Message -->
+    <div id="successMessage" class="success-message">
+
+        <div class="success-box">
+
+            <div class="success-icon">✓</div>
+
+            <h2>Registration Successful!</h2>
+
+            <p>
+                You have successfully registered for the event.
+            </p>
+
+            <button onclick="closeSuccess()">
+                Continue
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">EventHub</div>
+
+        <p>
+            Event Registration Management System
+        </p>
+
+        <p>
+            © 2026 EventHub. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
